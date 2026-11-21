@@ -1,0 +1,974 @@
+<!DOCTYPE html><html lang="id" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porto Folio — Evita Zahrotus Safira</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'pink-pastel': '#F7B5D1',
+        'pink-deep': '#8B4367',
+        'pink-gingham': '#FADADD',
+        'grass-dark': '#163015',
+        'grass-mid': '#274E22',
+        'paper-linen': '#EFECE6',
+        'ink': '#181818',
+        'ink-soft': '#4A4A4A',
+        'xp-blue': '#0058E6',
+        'xp-sky': '#5A9CF8',
+        'selection-cyan': '#00C4CC',
+        'primary': '#8B4367',
+        'on-primary': '#FFFFFF',
+        'secondary': '#163015',
+        'on-secondary': '#FFFFFF',
+        'tertiary': '#0058E6',
+        'on-tertiary': '#FFFFFF',
+        'surface': '#EFECE6',
+        'on-surface': '#181818',
+        'surface-container': '#FFFFFF',
+        'surface-container-low': '#F8F6F2',
+        'on-surface-variant': '#4A4A4A',
+        'outline': '#181818',
+        'outline-variant': '#D5D8DE',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '18px',
+        'xl': '36px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '80px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Playfair Display"', 'sans-serif'],
+        'headline': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'title': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'label': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'handwritten': ['"Caveat"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['120px', { lineHeight: '108px', letterSpacing: '-2px', fontWeight: '900' }],
+        'display-lg-mobile': ['32px', { lineHeight: '36px', letterSpacing: '-0.5px', fontWeight: '900' }],
+        'headline-lg': ['28px', { lineHeight: '34px', letterSpacing: '-0.3px', fontWeight: '800' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.2px', fontWeight: '700' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-md': ['15px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'handwritten-lg': ['24px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '700' }],
+      },
+      transitionDuration: {
+        'state-change': '180ms',
+        'reveal-enter': '700ms',
+        'modal-enter': '220ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'reveal-enter': '0ms',
+        'modal-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+        'reveal-enter': 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+        'modal-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Playfair+Display:ital,wght@0,700;1,700;1,900&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block; width: 1em; height: 1em; line-height: 1 !important;
+      box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle;
+    }
+
+    :root {
+      --pink-pastel: #F7B5D1;
+      --pink-deep: #8B4367;
+      --pink-gingham: #FADADD;
+      --grass-dark: #163015;
+      --grass-mid: #274E22;
+      --paper-linen: #EFECE6;
+      --ink: #181818;
+      --ink-soft: #4A4A4A;
+      --xp-blue: #0058E6;
+      --xp-sky: #5A9CF8;
+      --selection-cyan: #00C4CC;
+      --ease: cubic-bezier(.25, .8, .25, 1);
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Global Utilities */
+    .pill-heading {
+      display: inline-block;
+      background: #FFFFFF;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      padding: 8px 28px;
+      font-weight: 800;
+      font-size: clamp(20px, 2.5vw, 28px);
+      line-height: 1.2;
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .marker-pink {
+      background: var(--pink-pastel);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .sticker-cutout {
+      filter:
+        drop-shadow(2px 0 0 #fff)
+        drop-shadow(-2px 0 0 #fff)
+        drop-shadow(0 2px 0 #fff)
+        drop-shadow(0 -2px 0 #fff)
+        drop-shadow(0 8px 16px rgba(0, 0, 0, 0.22));
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* Section 1: Artificial Turf Texture */
+    .hero-turf {
+      background-color: var(--grass-dark);
+      background-image:
+        radial-gradient(ellipse at center, transparent 35%, rgba(6, 18, 6, 0.68) 100%),
+        repeating-linear-gradient(112deg, rgba(56, 110, 44, 0.28) 0px, rgba(56, 110, 44, 0.28) 2px, transparent 2px, transparent 6px),
+        repeating-linear-gradient(-68deg, rgba(39, 78, 34, 0.35) 0px, rgba(39, 78, 34, 0.35) 1.5px, transparent 1.5px, transparent 5px),
+        linear-gradient(160deg, #1E3E19 0%, #163015 55%, #0F230E 100%);
+    }
+
+    .porto-ribbon {
+      background: var(--pink-deep);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: clamp(18px, 2.2vw, 26px);
+      padding: 4px 28px 6px;
+      clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+      margin-bottom: -14px;
+      z-index: 2;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+    }
+
+    .folio-display {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: clamp(92px, 16vw, 210px);
+      line-height: 0.85;
+      color: var(--pink-pastel);
+      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      letter-spacing: -0.03em;
+    }
+
+    /* Section 2: Woven Linen Paper */
+    .bg-linen {
+      background-color: var(--paper-linen);
+      background-image:
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 3px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 3px);
+    }
+
+    /* Retro Silver Feature Phone */
+    .phone-chassis {
+      background: linear-gradient(145deg, #F5F6F8 0%, #D5D8DE 48%, #AEB3BC 100%);
+      border: 2px solid #9AA0AA;
+      border-radius: 36px;
+      box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, 0.9),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.18),
+        0 20px 38px rgba(0, 0, 0, 0.22);
+    }
+
+    .phone-gingham {
+      background-color: #FFFFFF;
+      background-image:
+        linear-gradient(90deg, rgba(250, 218, 221, 0.72) 50%, transparent 50%),
+        linear-gradient(rgba(250, 218, 221, 0.72) 50%, transparent 50%);
+      background-size: 24px 24px;
+    }
+
+    .phone-dpad {
+      background: linear-gradient(145deg, #FFFFFF 0%, #C8CDD6 100%);
+      border: 2px solid #8E95A0;
+      box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 3px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.14s var(--ease);
+    }
+    .phone-dpad:active {
+      transform: scale(0.95);
+    }
+
+    /* Software & Tools Tiles */
+    .skill-tile {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+      transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    }
+    .skill-tile:hover {
+      transform: translateY(-4px) rotate(-4deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section 3: Alpine Scenery & Pink Clipboard */
+    .bg-alpine {
+      background: linear-gradient(180deg, #B5D2E8 0%, #D9E8F3 45%, #8BAEC4 100%);
+    }
+
+    .chrome-clip {
+      background: linear-gradient(180deg, #E4E7EC 0%, #FFFFFF 35%, #9DA3AE 70%, #D2D6DE 100%);
+      border: 1.5px solid #7C828D;
+      border-radius: 12px 12px 6px 6px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.26), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    }
+
+    .clipboard-board {
+      background-color: var(--pink-pastel);
+      background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+      background-size: 16px 16px;
+      border-radius: 18px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    }
+
+    /* Section 4: Windows XP Bliss & Explorer Window */
+    .bg-bliss {
+      background: linear-gradient(180deg, #4B94F2 0%, #7CB9FA 45%, #C6E3FD 72%, #50A834 72%, #3D8C24 100%);
+    }
+
+    .xp-window {
+      border: 3px solid #0054E3;
+      border-radius: 8px 8px 4px 4px;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .xp-titlebar {
+      height: 34px;
+      background: linear-gradient(180deg, #0997FF 0%, #0058E6 48%, #0050EE 52%, #003DD7 100%);
+    }
+
+    .xp-dot-grid {
+      background-color: #FFFFFF;
+      background-image: radial-gradient(#D9DDE4 1.25px, transparent 1.25px);
+      background-size: 20px 20px;
+    }
+
+    .xp-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 3px;
+      border: 1px solid #FFFFFF;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+    .xp-btn-blue {
+      background: linear-gradient(180deg, #4A95F9 0%, #1B64D6 100%);
+    }
+    .xp-btn-red {
+      background: linear-gradient(180deg, #F3755B 0%, #D93018 100%);
+    }
+
+    /* Canva Bounding Selection Frame & 8 Handles */
+    .canva-card {
+      border: 2px solid transparent;
+      transition: border-color 0.18s var(--ease), transform 0.18s var(--ease);
+    }
+    .canva-card:hover,
+    .canva-card.is-selected,
+    .canva-card:focus-visible {
+      border-color: var(--selection-cyan);
+      outline: none;
+    }
+    .canva-handle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--selection-cyan);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s var(--ease);
+      z-index: 10;
+    }
+    .canva-card:hover .canva-handle,
+    .canva-card.is-selected .canva-handle,
+    .canva-card:focus-visible .canva-handle {
+      opacity: 1;
+    }
+    .handle-tl { top: -5px; left: -5px; }
+    .handle-tc { top: -5px; left: 50%; transform: translateX(-50%); }
+    .handle-tr { top: -5px; right: -5px; }
+    .handle-ml { top: 50%; left: -5px; transform: translateY(-50%); }
+    .handle-mr { top: 50%; right: -5px; transform: translateY(-50%); }
+    .handle-bl { bottom: -5px; left: -5px; }
+    .handle-bc { bottom: -5px; left: 50%; transform: translateX(-50%); }
+    .handle-br { bottom: -5px; right: -5px; }
+
+    dialog::backdrop {
+      background: rgba(24, 24, 24, 0.58);
+      backdrop-filter: blur(3px);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+  <!-- Floating Top-Right Pill Navbar -->
+  <nav aria-label="Navigasi utama" class="fixed top-4 right-4 sm:right-6 z-50 flex items-center gap-1 sm:gap-2 rounded-full bg-surface-container/90 backdrop-blur-md border border-outline px-3 sm:px-4 py-1.5 shadow-md">
+    <a href="#about" class="font-label text-label-sm sm:text-label-lg text-on-surface px-2.5 py-1 rounded-full hover:bg-pink-gingham transition-colors duration-state-change">About</a>
+    <a href="#experience" class="font-label text-label-sm sm:text-label-lg text-on-surface px-2.5 py-1 rounded-full hover:bg-pink-gingham transition-colors duration-state-change">Experience</a>
+    <a href="#projects" class="font-label text-label-sm sm:text-label-lg text-on-surface px-2.5 py-1 rounded-full hover:bg-pink-gingham transition-colors duration-state-change">Projects</a>
+    <a href="#contact" class="font-label text-label-sm sm:text-label-lg text-on-surface px-2.5 py-1 rounded-full hover:bg-pink-gingham transition-colors duration-state-change">Contact</a>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: HERO COVER (ARTIFICIAL GRASS) -->
+    <header class="hero-turf relative min-h-[870px] w-full flex flex-col items-center justify-center overflow-hidden px-gutter-lg py-section" data-stitch-vh="min-h-[870px]===min-h-[85svh]">
+      <!-- SVG Micro-grain Turf Noise Overlay -->
+      <svg class="pointer-events-none absolute inset-0 w-full h-full opacity-25 mix-blend-overlay" aria-hidden="true">
+        <filter id="turf-noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"></feTurbulence>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#turf-noise)"></rect>
+      </svg>
+
+      <div class="relative z-10 flex flex-col items-center text-center select-none">
+        <div class="flex flex-col items-start">
+          <span class="porto-ribbon font-headline tracking-tight self-start ml-2 sm:ml-6">Porto</span>
+          <h1 class="folio-display">Folio</h1>
+        </div>
+        <p class="mt-4 font-body italic font-medium text-on-secondary tracking-wide drop-shadow-md" style="font-size: clamp(16px, 2vw, 24px);">
+          Evita Zahrotus Safira
+        </p>
+      </div>
+
+      <a href="#about" class="relative z-10 mt-12 inline-flex items-center gap-gutter-xs rounded-full bg-surface-container/85 border border-outline px-gutter-lg py-gutter-sm font-label text-label-lg text-on-surface shadow-sm hover:bg-surface-container transition-transform duration-state-change hover:-translate-y-0.5">
+        <span data-design-text-token="label-lg">scroll down ↓</span>
+      </a>
+    </header>
+
+    <!-- SECTION 2: ABOUT, EDUCATION, SKILLS & CONTACT -->
+    <section id="about" class="bg-linen w-full py-section px-gutter-lg">
+      <div class="max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-12 lg:gap-14 items-center">
+
+        <!-- Left Column: Retro Silver Feature Phone Mockup -->
+        <div class="reveal flex justify-center">
+          <div class="phone-chassis w-full max-w-[330px] aspect-[9/17.5] p-4 flex flex-col justify-between relative">
+            <!-- Top Speaker Slot -->
+            <div class="flex justify-center pt-1 pb-2">
+              <div class="w-14 h-2 rounded-full bg-ink/80 shadow-inner"></div>
+            </div>
+
+            <!-- Inner Screen -->
+            <div class="phone-gingham relative flex-1 rounded-md border-2 border-ink/70 overflow-hidden shadow-inner flex flex-col justify-center items-center">
+              <!-- Greeting Pill Badge -->
+              <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="absolute top-3 right-3 z-20 inline-flex items-center rounded-full bg-secondary text-on-secondary px-gutter-md py-1.5 shadow-md">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Hai, aku Evita!</span>
+              </span>
+            </div>
+
+            <!-- Tactile Keypad -->
+            <div class="pt-4 pb-2 px-2 flex flex-col gap-3">
+              <!-- Softkeys & Call/End row -->
+              <div class="flex items-center justify-between px-2">
+                <button type="button" aria-label="Left softkey" class="w-10 h-5 rounded-full bg-surface-container border border-ink/40 text-ink font-bold text-xs shadow-sm active:scale-95 transition-transform">—</button>
+                <button type="button" aria-label="Right softkey" class="w-10 h-5 rounded-full bg-surface-container border border-ink/40 text-ink font-bold text-xs shadow-sm active:scale-95 transition-transform">—</button>
+              </div>
+              <div class="flex items-center justify-between items-center px-2">
+                <button type="button" aria-label="Call" class="w-11 h-7 rounded-full bg-grass-mid border border-ink/50 text-on-secondary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-base" aria-hidden="true">call</span>
+                </button>
+                <!-- Center 5-Way D-Pad -->
+                <button type="button" aria-label="5-way navigation pad" class="phone-dpad w-16 h-16 rounded-md flex items-center justify-center">
+                  <span class="w-7 h-7 rounded-sm border border-ink/30 bg-surface-container/60"></span>
+                </button>
+                <button type="button" aria-label="End call" class="w-11 h-7 rounded-full bg-pink-deep border border-ink/50 text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-base" aria-hidden="true">call_end</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Bio, Education, Software Skills & Contact -->
+        <div class="reveal flex flex-col gap-6">
+          <div>
+            <span class="marker-pink font-headline text-headline-md inline-block">Halo!</span>
+          </div>
+
+          <div class="flex flex-col gap-3 font-body text-body-md text-on-surface max-w-prose text-pretty">
+            <p>
+              Perkenalkan, aku <span class="marker-pink">Evita Zahrotus Safira</span>, mahasiswa S1 Teknik Informatika di Institut Teknologi PLN (lulusan SMA Darul Ulum 1 Unggulan).
+            </p>
+            <p>
+              Tertarik pada bidang teknologi informasi, manajemen administrasi &amp; keuangan organisasi, multimedia kreatif, serta pengelolaan acara.
+            </p>
+          </div>
+
+          <!-- Pendidikan -->
+          <div class="flex flex-col gap-3">
+            <h2 class="font-title text-title-md text-on-surface">Pendidikan</h2>
+            <div class="flex flex-col gap-3">
+              <div class="border-l-[3px] border-pink-pastel pl-3">
+                <p class="font-title text-title-md text-on-surface">Institut Teknologi PLN</p>
+                <p class="font-body text-body-sm text-on-surface-variant">S1 Informatics Engineering (<span class="tabular-nums">Sep 2026 – Sekarang</span>)</p>
+              </div>
+              <div class="border-l-[3px] border-pink-pastel pl-3">
+                <p class="font-title text-title-md text-on-surface">SMA Darul Ulum 1 Unggulan</p>
+                <p class="font-body text-body-sm text-on-surface-variant tabular-nums">Jul 2023 – Mei 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Software & Tools -->
+          <div class="flex flex-col gap-3">
+            <h2 class="font-title text-title-md text-on-surface">Software &amp; Tools</h2>
+            <div class="flex flex-wrap items-center gap-3.5">
+              <!-- Canva -->
+              <div class="skill-tile flex items-center justify-center text-white font-headline font-extrabold text-sm cursor-default" title="Canva" style="background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%);">
+                Canva
+              </div>
+              <!-- CapCut -->
+              <div class="skill-tile bg-ink flex items-center justify-center text-white cursor-default" title="CapCut">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 7l16 5-16 5V7z"></path>
+                  <path d="M4 17l16-5"></path>
+                </svg>
+              </div>
+              <!-- Microsoft Excel -->
+              <div class="skill-tile flex items-center justify-center text-white font-headline font-extrabold text-xl cursor-default" title="Microsoft Excel" style="background-color: #217346;">
+                X
+              </div>
+              <!-- Microsoft Word -->
+              <div class="skill-tile flex items-center justify-center text-white font-headline font-extrabold text-xl cursor-default" title="Microsoft Word" style="background-color: #2B579A;">
+                W
+              </div>
+              <!-- VS Code / HTML-CSS -->
+              <div class="skill-tile flex items-center justify-center text-white font-headline font-bold text-base cursor-default" title="VS Code / HTML-CSS" style="background-color: #007ACC;">
+                &lt;/&gt;
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <hr class="border-t-[1.5px] border-ink my-1">
+
+          <!-- Kontak -->
+          <div id="contact" class="flex flex-col gap-3 scroll-mt-20">
+            <h2 class="font-title text-title-md text-on-surface">Kontak</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 font-body text-body-sm text-on-surface">
+              <a href="https://www.linkedin.com/in/evita-zahrotus-safira" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 hover:text-primary transition-colors">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+                </svg>
+                <span>Evita Zahrotus Safira</span>
+              </a>
+
+              <a href="https://www.instagram.com/zhrsaf._" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 hover:text-primary transition-colors">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>@zhrsaf._</span>
+              </a>
+
+              <a href="mailto:safiraevita094@gmail.com" class="inline-flex items-center gap-2.5 hover:text-primary transition-colors">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>safiraevita094@gmail.com</span>
+              </a>
+
+              <div class="inline-flex items-center gap-2.5">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Cengkareng, Jakarta Barat, Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ORGANIZATIONAL EXPERIENCE -->
+    <section id="experience" class="bg-alpine relative w-full py-section px-gutter-lg overflow-hidden scroll-mt-12">
+      <!-- Atmospheric Alpine Mountain & Pine Forest SVG Scenery -->
+      <svg class="pointer-events-none absolute inset-0 w-full h-full object-cover" preserveAspectRatio="none" viewBox="0 0 1440 800" aria-hidden="true">
+        <defs>
+          <linearGradient id="mist-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#A6C8E2"></stop>
+            <stop offset="100%" stop-color="#DCEBF5"></stop>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="800" fill="url(#mist-sky)"></rect>
+        <!-- Distant Mountain Peaks -->
+        <path d="M0,480 L180,260 L340,390 L520,210 L740,410 L960,180 L1180,360 L1340,240 L1440,340 L1440,800 L0,800 Z" fill="#89A8BD" opacity="0.65"></path>
+        <path d="M0,560 L240,360 L460,500 L680,330 L920,490 L1140,320 L1440,480 L1440,800 L0,800 Z" fill="#5E8196" opacity="0.7"></path>
+        <!-- Deep Pine Forest Silhouette -->
+        <path d="M0,800 L0,620 L40,560 L80,620 L120,520 L170,630 L210,550 L260,640 L310,540 L360,630 L420,570 L470,640 L520,530 L580,640 L640,560 L700,630 L760,520 L820,640 L880,550 L940,630 L1000,540 L1060,640 L1120,560 L1180,630 L1240,530 L1300,640 L1360,560 L1440,630 L1440,800 Z" fill="#183424"></path>
+      </svg>
+
+      <!-- Pastel Pink Clipboard Centerpiece -->
+      <div class="reveal relative z-10 max-w-[980px] mx-auto pt-7">
+        <!-- Top-Center Brushed Chrome Metal Clip -->
+        <div class="chrome-clip w-[150px] h-[48px] mx-auto -mb-5 relative z-20 flex items-center justify-center">
+          <div class="w-4 h-4 rounded-full bg-surface border border-ink/50 shadow-inner"></div>
+        </div>
+
+        <!-- Pink Clipboard Board -->
+        <div class="clipboard-board px-6 py-10 sm:px-11 sm:py-12">
+          <!-- Group 1: Pengalaman Organisasi -->
+          <div>
+            <h2 class="pill-heading font-headline text-headline-lg">Pengalaman Organisasi</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mt-7">
+              <!-- Column 1 -->
+              <div class="border-l-[1.5px] border-ink pl-4 flex flex-col gap-6">
+                <div>
+                  <h3 class="font-title text-title-md text-on-surface">Ikappdar (Ikatan Keluarga Pondok Pesantren Darul Ulum)</h3>
+                  <p class="font-label text-label-sm text-ink-soft mt-1 tabular-nums">Nov 2024 – Nov 2025</p>
+                  <p class="font-body text-body-sm text-on-surface mt-1.5">
+                    <strong>Bendahara</strong> — Mengelola pembukuan kas, anggaran kegiatan, dan laporan keuangan organisasi.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-title text-title-md text-on-surface">Ikappdar (Ikatan Keluarga Pondok Pesantren Darul Ulum)</h3>
+                  <p class="font-label text-label-sm text-ink-soft mt-1 tabular-nums">Apr 2024</p>
+                  <p class="font-body text-body-sm text-on-surface mt-1.5">
+                    <strong>Anggota Sie Acara</strong> — Menyusun rundown, koordinasi teknis panggung, dan kelancaran rangkaian acara.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="border-l-[1.5px] border-ink pl-4 flex flex-col gap-6">
+                <div>
+                  <h3 class="font-title text-title-md text-on-surface">Pengurus Asrama</h3>
+                  <p class="font-label text-label-sm text-ink-soft mt-1 tabular-nums">Okt 2024 – Okt 2025</p>
+                  <p class="font-body text-body-sm text-on-surface mt-1.5">
+                    <strong>Anggota Sie Kebersihan</strong> — Mengkoordinasikan jadwal piket, kebersihan lingkungan, dan ketertiban asrama.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="border-l-[1.5px] border-ink pl-4 flex flex-col gap-6">
+                <div>
+                  <h3 class="font-title text-title-md text-on-surface">Pengurus Asrama</h3>
+                  <p class="font-label text-label-sm text-ink-soft mt-1 tabular-nums">Okt 2023 – Okt 2024</p>
+                  <p class="font-body text-body-sm text-on-surface mt-1.5">
+                    <strong>Anggota Multimedia</strong> — Dokumentasi foto/video kegiatan serta desain publikasi visual asrama.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2: Latar Belakang Pendidikan -->
+          <div class="mt-9">
+            <h2 class="pill-heading font-headline text-headline-lg">Latar Belakang Pendidikan</h2>
+
+            <div class="border-l-[1.5px] border-ink pl-4 mt-5 flex flex-col gap-4">
+              <div>
+                <p class="font-title text-title-md text-on-surface">
+                  Institut Teknologi PLN <span class="font-body text-body-sm text-ink-soft font-normal tabular-nums">(Sep 2026 – Sekarang)</span>
+                </p>
+                <p class="font-body text-body-sm text-on-surface mt-0.5">Mahasiswa S1 Teknik Informatika.</p>
+              </div>
+              <div>
+                <p class="font-title text-title-md text-on-surface">
+                  SMA Darul Ulum 1 Unggulan <span class="font-body text-body-sm text-ink-soft font-normal tabular-nums">(Jul 2023 – Mei 2026)</span>
+                </p>
+                <p class="font-body text-body-sm text-on-surface mt-0.5">Pendidikan Menengah Atas berbasis pesantren.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROJECTS — WINDOWS XP & CANVA SELECTION GRID -->
+    <section id="projects" class="bg-bliss relative w-full pt-20 pb-24 px-gutter-lg overflow-hidden scroll-mt-12">
+      <!-- Bliss Rolling Hills & Soft Clouds SVG -->
+      <svg class="pointer-events-none absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 800" aria-hidden="true">
+        <ellipse cx="260" cy="140" rx="140" ry="38" fill="#FFFFFF" opacity="0.72"></ellipse>
+        <ellipse cx="320" cy="128" rx="95" ry="34" fill="#FFFFFF" opacity="0.82"></ellipse>
+        <ellipse cx="1080" cy="180" rx="170" ry="42" fill="#FFFFFF" opacity="0.68"></ellipse>
+        <ellipse cx="1160" cy="166" rx="105" ry="36" fill="#FFFFFF" opacity="0.78"></ellipse>
+        <path d="M0,560 Q360,460 760,540 T1440,500 L1440,800 L0,800 Z" fill="#63B63C"></path>
+        <path d="M0,620 Q480,530 960,610 T1440,580 L1440,800 L0,800 Z" fill="#469628"></path>
+      </svg>
+
+      <div class="relative z-10 max-w-[1060px] mx-auto flex flex-col items-center">
+        <h2 class="pill-heading font-headline text-headline-lg mb-8">Projek &amp; Karya</h2>
+
+        <!-- Retro Windows XP Explorer Window -->
+        <div class="reveal xp-window w-full bg-surface-container overflow-hidden">
+          <!-- Glossy XP Title Bar -->
+          <div class="xp-titlebar px-3 flex items-center justify-between gap-2 select-none">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="material-symbols-outlined text-yellow-300 text-lg shrink-0" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">folder</span>
+              <span class="font-label text-label-sm sm:text-label-lg text-white truncate drop-shadow-sm">C:\Evita\Portofolio\Projek_2024-2026</span>
+            </div>
+            <div class="flex items-center gap-1 shrink-0">
+              <span class="xp-btn xp-btn-blue" aria-hidden="true">_</span>
+              <span class="xp-btn xp-btn-blue" aria-hidden="true">□</span>
+              <span class="xp-btn xp-btn-red" aria-hidden="true">✕</span>
+            </div>
+          </div>
+
+          <!-- Canvas Body with 20px Dot Grid -->
+          <div class="xp-dot-grid px-5 py-7 sm:px-7 sm:py-8">
+            <!-- Category Filter Bar -->
+            <div class="flex flex-wrap items-center gap-2.5 mb-7" role="toolbar" aria-label="Filter kategori projek">
+              <button type="button" data-filter="all" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="filter-btn inline-flex items-center justify-center rounded-full bg-primary text-on-primary border-2 border-outline px-gutter-lg py-1.5 shadow-sm transition-colors duration-state-change">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Semua</span>
+              </button>
+              <button type="button" data-filter="Web &amp; IT" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="filter-btn inline-flex items-center justify-center rounded-full bg-surface-container text-on-surface border-2 border-outline px-gutter-lg py-1.5 transition-colors duration-state-change hover:bg-pink-gingham">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Web &amp; IT</span>
+              </button>
+              <button type="button" data-filter="Administrasi" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="filter-btn inline-flex items-center justify-center rounded-full bg-surface-container text-on-surface border-2 border-outline px-gutter-lg py-1.5 transition-colors duration-state-change hover:bg-pink-gingham">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Administrasi</span>
+              </button>
+              <button type="button" data-filter="Multimedia" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="filter-btn inline-flex items-center justify-center rounded-full bg-surface-container text-on-surface border-2 border-outline px-gutter-lg py-1.5 transition-colors duration-state-change hover:bg-pink-gingham">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Multimedia</span>
+              </button>
+            </div>
+
+            <!-- 4-Column Poster Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              <!-- Project 1 -->
+              <div role="button" tabindex="0" data-project-id="1" data-category="Web &amp; IT" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" class="canva-card project-card relative bg-surface-container p-2.5 flex flex-col justify-between cursor-pointer shadow-sm">
+                <!-- 8 Canva Selection Handles -->
+                <span class="canva-handle handle-tl" aria-hidden="true"></span>
+                <span class="canva-handle handle-tc" aria-hidden="true"></span>
+                <span class="canva-handle handle-tr" aria-hidden="true"></span>
+                <span class="canva-handle handle-ml" aria-hidden="true"></span>
+                <span class="canva-handle handle-mr" aria-hidden="true"></span>
+                <span class="canva-handle handle-bl" aria-hidden="true"></span>
+                <span class="canva-handle handle-bc" aria-hidden="true"></span>
+                <span class="canva-handle handle-br" aria-hidden="true"></span>
+
+                <div>
+                  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-surface-container-low mb-3 border border-outline-variant">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAk5CNcc0KZDFtHUI2sg-qwSP0k1GgOMzr52ORap5jzs5l2FPOEEDFSDvApajjByF3Z6L98l0ybd6yYjJ75iGotKYThJyJvGB2KSYKIxHGeKqRQEJYANcbsOIm5nbuJBEf_q9QrIfRK97pyg0zy-w0fPTR1YwLfs_4MByd6cxRbS_qU7EL93uZ-fsyAkge2X_zwdF7Mt52meAXrYnCi8Wr57tRzBucjYJMf6WDmojOo2OqousZKan3okfjU" alt="Website Portofolio Personal" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-sm text-primary" data-design-text-token="label-sm">Web &amp; IT</span>
+                    <span class="font-label text-label-sm text-on-surface-variant tabular-nums" data-design-text-token="label-sm">2026</span>
+                  </div>
+                  <h3 class="font-title text-title-md text-on-surface leading-snug" data-design-text-token="title-md">Website Portofolio Personal</h3>
+                </div>
+                <p class="font-body text-body-sm text-on-surface-variant mt-2" data-design-text-token="body-sm">
+                  Website portofolio interaktif bergaya Y2K digital scrapbook menggunakan HTML, CSS, dan JavaScript.
+                </p>
+              </div>
+
+              <!-- Project 2 -->
+              <div role="button" tabindex="0" data-project-id="2" data-category="Administrasi" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" class="canva-card project-card relative bg-surface-container p-2.5 flex flex-col justify-between cursor-pointer shadow-sm">
+                <span class="canva-handle handle-tl" aria-hidden="true"></span>
+                <span class="canva-handle handle-tc" aria-hidden="true"></span>
+                <span class="canva-handle handle-tr" aria-hidden="true"></span>
+                <span class="canva-handle handle-ml" aria-hidden="true"></span>
+                <span class="canva-handle handle-mr" aria-hidden="true"></span>
+                <span class="canva-handle handle-bl" aria-hidden="true"></span>
+                <span class="canva-handle handle-bc" aria-hidden="true"></span>
+                <span class="canva-handle handle-br" aria-hidden="true"></span>
+
+                <div>
+                  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-surface-container-low mb-3 border border-outline-variant">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAwCXicidy6QPmsh6iS1rczhlHcXHDLY73c5bn0Z6lkrzNriB6IXlY8VDpddz6mHm09aMSb__IMepmn8IaVLgTzHLa_Eh3jwoOZObCTQrdS223sqwT79hKmzJlnYIAg5N4UsuxDhREHtk6c64Bd7H7OmFdR7WNIuE5S94FhsPKX6-RVKpi1tD9tWiwI4B-VxvXHUOSk78Jfv-pCpmj_1LdArdcMv2h3KBIHl9cF416XwfeBQKAO_-aXYBGZZk66ka0TXYg" alt="Sistem Pembukuan Kas Ikappdar" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-sm text-primary" data-design-text-token="label-sm">Administrasi</span>
+                    <span class="font-label text-label-sm text-on-surface-variant tabular-nums" data-design-text-token="label-sm">2025</span>
+                  </div>
+                  <h3 class="font-title text-title-md text-on-surface leading-snug" data-design-text-token="title-md">Sistem Pembukuan Kas Ikappdar</h3>
+                </div>
+                <p class="font-body text-body-sm text-on-surface-variant mt-2" data-design-text-token="body-sm">
+                  Template manajemen anggaran, pencatatan pemasukan/pengeluaran, dan laporan keuangan bendahara.
+                </p>
+              </div>
+
+              <!-- Project 3 -->
+              <div role="button" tabindex="0" data-project-id="3" data-category="Multimedia" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" class="canva-card project-card relative bg-surface-container p-2.5 flex flex-col justify-between cursor-pointer shadow-sm">
+                <span class="canva-handle handle-tl" aria-hidden="true"></span>
+                <span class="canva-handle handle-tc" aria-hidden="true"></span>
+                <span class="canva-handle handle-tr" aria-hidden="true"></span>
+                <span class="canva-handle handle-ml" aria-hidden="true"></span>
+                <span class="canva-handle handle-mr" aria-hidden="true"></span>
+                <span class="canva-handle handle-bl" aria-hidden="true"></span>
+                <span class="canva-handle handle-bc" aria-hidden="true"></span>
+                <span class="canva-handle handle-br" aria-hidden="true"></span>
+
+                <div>
+                  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-surface-container-low mb-3 border border-outline-variant">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrBcXl58-mM1i3DNpLzj10a9-Go6fuoLgaua82eEGa60geiNvswoyINGCd_m29nA7xqt_Clg_vmSu4EaT1S1FncagcKbDMc7uXQj1K5IPTTfI6jwxfDn73O-hbSgeF3ZSfk2_NlqrpGKQ89LLRoS_DPLsr0N77UCDuLcSwR_XcNT4oc6IXSodBTm2lY0de4hdPB-2mShANC10Qn7Kr8lg_zXl3ZBO0J5BHRO8oB53YNsunaDXY_3t47lQSbtYOLCmfGuRP8V" alt="Publikasi &amp; Dokumentasi Asrama" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-sm text-primary" data-design-text-token="label-sm">Multimedia</span>
+                    <span class="font-label text-label-sm text-on-surface-variant tabular-nums" data-design-text-token="label-sm">2024</span>
+                  </div>
+                  <h3 class="font-title text-title-md text-on-surface leading-snug" data-design-text-token="title-md">Publikasi &amp; Dokumentasi Asrama</h3>
+                </div>
+                <p class="font-body text-body-sm text-on-surface-variant mt-2" data-design-text-token="body-sm">
+                  Desain poster informasi, konten visual, dan dokumentasi kegiatan Pengurus Asrama Darul Ulum.
+                </p>
+              </div>
+
+              <!-- Project 4 -->
+              <div role="button" tabindex="0" data-project-id="4" data-category="Multimedia" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" class="canva-card project-card relative bg-surface-container p-2.5 flex flex-col justify-between cursor-pointer shadow-sm">
+                <span class="canva-handle handle-tl" aria-hidden="true"></span>
+                <span class="canva-handle handle-tc" aria-hidden="true"></span>
+                <span class="canva-handle handle-tr" aria-hidden="true"></span>
+                <span class="canva-handle handle-ml" aria-hidden="true"></span>
+                <span class="canva-handle handle-mr" aria-hidden="true"></span>
+                <span class="canva-handle handle-bl" aria-hidden="true"></span>
+                <span class="canva-handle handle-bc" aria-hidden="true"></span>
+                <span class="canva-handle handle-br" aria-hidden="true"></span>
+
+                <div>
+                  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-surface-container-low mb-3 border border-outline-variant">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAkF9lbVQYl8GqPC_W6dbq3Lndk2WuSSZffoXw7Q6X_7eiWO7yIYMbToWVFxttypwu5IyKowR8qd5HGQ0mUCUAsFnDbW0BDHyRgHQwGSmyAvZagf9VY9mssLxKWRv-vY4_6diIQN8R4aQoJKsINK-aLcnhB2u955YX2FEuav4a8EcGrvw-BjGP1JTnFcHRw1ldokLFsZEMV8vVYrIaycwmO2RdE8W8vFy6m96UHRVdaL7yh1VKr-Rz7H7xmmo4C7A" alt="Rundown &amp; Konsep Acara Ikappdar" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-sm text-primary" data-design-text-token="label-sm">Multimedia</span>
+                    <span class="font-label text-label-sm text-on-surface-variant tabular-nums" data-design-text-token="label-sm">2024</span>
+                  </div>
+                  <h3 class="font-title text-title-md text-on-surface leading-snug" data-design-text-token="title-md">Rundown &amp; Konsep Acara Ikappdar</h3>
+                </div>
+                <p class="font-body text-body-sm text-on-surface-variant mt-2" data-design-text-token="body-sm">
+                  Perencanaan susunan acara, koordinasi teknis, dan materi visual kegiatan organisasi daerah.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 5: FOOTER -->
+  <footer class="bg-grass-dark border-t-2 border-pink-pastel text-on-secondary text-center py-5 px-gutter-lg">
+    <p class="font-body text-body-sm">© 2026 Evita Zahrotus Safira · Y2K Digital Scrapbook Portfolio ✦</p>
+  </footer>
+
+  <!-- Windows XP Project Detail Modal -->
+  <dialog id="project-modal" data-component-id="modal-standard" data-component-type="modal" data-component-variant="standard" aria-labelledby="modal-title" aria-describedby="modal-meta modal-desc" class="rounded DEFAULT border-[3px] border-xp-blue bg-surface-container text-on-surface shadow-2xl max-w-xl w-[92vw] p-0 overflow-hidden">
+    <header class="xp-titlebar flex items-center justify-between px-3">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="material-symbols-outlined text-yellow-300 text-base shrink-0" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">description</span>
+        <h2 id="modal-title" class="font-label text-label-lg text-white truncate" data-design-text-token="label-lg">Detail Projek</h2>
+      </div>
+      <button id="modal-close-x" type="button" aria-label="Tutup dialog" class="xp-btn xp-btn-red cursor-pointer">✕</button>
+    </header>
+
+    <div class="p-5 sm:p-6 flex flex-col gap-4">
+      <div class="aspect-[4/3] w-full overflow-hidden rounded-sm border border-outline-variant bg-surface-container-low">
+        <img id="modal-image" src alt class="w-full h-full object-cover">
+      </div>
+      <div>
+        <p id="modal-meta" class="font-label text-label-sm text-primary" data-design-text-token="label-sm"></p>
+        <h3 id="modal-heading" class="font-headline text-headline-md text-on-surface mt-1" data-design-text-token="headline-md"></h3>
+        <p id="modal-desc" class="font-body text-body-md text-on-surface-variant mt-2" data-design-text-token="body-md"></p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="font-label text-label-sm text-on-surface">Tools:</span>
+        <span id="modal-tools" class="font-body text-body-sm text-on-surface-variant"></span>
+      </div>
+    </div>
+
+    <footer class="flex items-center justify-end px-5 pb-5 sm:px-6 sm:pb-6">
+      <button id="modal-close-btn" type="button" class="inline-flex items-center justify-center rounded-full bg-primary text-on-primary border-2 border-outline px-gutter-lg py-1.5 cursor-pointer hover:opacity-90">
+        <span class="font-label text-label-lg" data-design-text-token="label-lg">Tutup</span>
+      </button>
+    </footer>
+  </dialog>
+
+  <script data-stitch-original-script="19d07576b6198d52===../../images/project_portfolio.jpg|||da67573c8da5e561===../../images/project_ikappdar_cashbook.jpg|||e7cb2826bee49f48===../../images/project_asrama_publication.jpg|||64a24229dd4df505===../../images/project_ikappdar_event.jpg">
+    (function () {
+      // Scroll Reveal via IntersectionObserver
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        reveals.forEach((el) => observer.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add('in'));
+      }
+
+      // Project Data for XP Modal
+      const projectData = {
+        '1': {
+          title: 'Website Portofolio Personal',
+          meta: 'Web & IT · 2026',
+          image: 'https://lh3.googleusercontent.com/aida/ALJJyrAk5CNcc0KZDFtHUI2sg-qwSP0k1GgOMzr52ORap5jzs5l2FPOEEDFSDvApajjByF3Z6L98l0ybd6yYjJ75iGotKYThJyJvGB2KSYKIxHGeKqRQEJYANcbsOIm5nbuJBEf_q9QrIfRK97pyg0zy-w0fPTR1YwLfs_4MByd6cxRbS_qU7EL93uZ-fsyAkge2X_zwdF7Mt52meAXrYnCi8Wr57tRzBucjYJMf6WDmojOo2OqousZKan3okfjU',
+          desc: 'Website portofolio interaktif bergaya Y2K digital scrapbook yang memadukan tekstur rumput sintetis, kertas linen, mockup ponsel retro, clipboard pastel pink, dan jendela Windows XP Explorer.',
+          tools: 'HTML5, CSS3, JavaScript, VS Code'
+        },
+        '2': {
+          title: 'Sistem Pembukuan Kas Ikappdar',
+          meta: 'Administrasi · 2025',
+          image: 'https://lh3.googleusercontent.com/aida/ALJJyrAwCXicidy6QPmsh6iS1rczhlHcXHDLY73c5bn0Z6lkrzNriB6IXlY8VDpddz6mHm09aMSb__IMepmn8IaVLgTzHLa_Eh3jwoOZObCTQrdS223sqwT79hKmzJlnYIAg5N4UsuxDhREHtk6c64Bd7H7OmFdR7WNIuE5S94FhsPKX6-RVKpi1tD9tWiwI4B-VxvXHUOSk78Jfv-pCpmj_1LdArdcMv2h3KBIHl9cF416XwfeBQKAO_-aXYBGZZk66ka0TXYg',
+          desc: 'Template manajemen anggaran, pencatatan pemasukan dan pengeluaran kas, serta laporan keuangan periodik untuk mendukung transparansi bendahara organisasi Ikappdar.',
+          tools: 'Microsoft Excel, Microsoft Word'
+        },
+        '3': {
+          title: 'Publikasi & Dokumentasi Asrama',
+          meta: 'Multimedia · 2024',
+          image: 'https://lh3.googleusercontent.com/aida/ALJJyrBcXl58-mM1i3DNpLzj10a9-Go6fuoLgaua82eEGa60geiNvswoyINGCd_m29nA7xqt_Clg_vmSu4EaT1S1FncagcKbDMc7uXQj1K5IPTTfI6jwxfDn73O-hbSgeF3ZSfk2_NlqrpGKQ89LLRoS_DPLsr0N77UCDuLcSwR_XcNT4oc6IXSodBTm2lY0de4hdPB-2mShANC10Qn7Kr8lg_zXl3ZBO0J5BHRO8oB53YNsunaDXY_3t47lQSbtYOLCmfGuRP8V',
+          desc: 'Perancangan poster informasi kegiatan, konten visual media sosial, serta dokumentasi foto dan video selama masa bakti Pengurus Asrama Darul Ulum.',
+          tools: 'Canva, CapCut'
+        },
+        '4': {
+          title: 'Rundown & Konsep Acara Ikappdar',
+          meta: 'Multimedia · 2024',
+          image: 'https://lh3.googleusercontent.com/aida/ALJJyrAkF9lbVQYl8GqPC_W6dbq3Lndk2WuSSZffoXw7Q6X_7eiWO7yIYMbToWVFxttypwu5IyKowR8qd5HGQ0mUCUAsFnDbW0BDHyRgHQwGSmyAvZagf9VY9mssLxKWRv-vY4_6diIQN8R4aQoJKsINK-aLcnhB2u955YX2FEuav4a8EcGrvw-BjGP1JTnFcHRw1ldokLFsZEMV8vVYrIaycwmO2RdE8W8vFy6m96UHRVdaL7yh1VKr-Rz7H7xmmo4C7A',
+          desc: 'Penyusunan susunan acara, koordinasi teknis panggung, serta pembuatan materi visual pendukung kelancaran rangkaian kegiatan organisasi daerah Ikappdar.',
+          tools: 'Canva, Microsoft Word, Microsoft Excel'
+        }
+      };
+
+      // Category Filter Logic
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          filterBtns.forEach((b) => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface');
+          btn.classList.add('bg-primary', 'text-on-primary');
+
+          projectCards.forEach((card) => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // XP Modal Open/Close
+      const modal = document.getElementById('project-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalImage = document.getElementById('modal-image');
+      const modalMeta = document.getElementById('modal-meta');
+      const modalHeading = document.getElementById('modal-heading');
+      const modalDesc = document.getElementById('modal-desc');
+      const modalTools = document.getElementById('modal-tools');
+      const closeX = document.getElementById('modal-close-x');
+      const closeBtn = document.getElementById('modal-close-btn');
+
+      function openProjectModal(id) {
+        const item = projectData[id];
+        if (!item || !modal) return;
+        projectCards.forEach((c) => c.classList.remove('is-selected'));
+        const activeCard = document.querySelector(`[data-project-id="${id}"]`);
+        if (activeCard) activeCard.classList.add('is-selected');
+
+        modalTitle.textContent = item.title;
+        modalImage.src = item.image;
+        modalImage.alt = item.title;
+        modalMeta.textContent = item.meta;
+        modalHeading.textContent = item.title;
+        modalDesc.textContent = item.desc;
+        modalTools.textContent = item.tools;
+
+        if (typeof modal.showModal === 'function') {
+          modal.showModal();
+        }
+      }
+
+      projectCards.forEach((card) => {
+        card.addEventListener('click', () => openProjectModal(card.getAttribute('data-project-id')));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openProjectModal(card.getAttribute('data-project-id'));
+          }
+        });
+      });
+
+      if (closeX) closeX.addEventListener('click', () => modal.close());
+      if (closeBtn) closeBtn.addEventListener('click', () => modal.close());
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) modal.close();
+        });
+      }
+    })();
+  </script>
+
+
+</body></html>

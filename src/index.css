@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink-pastel: #F7B5D1;
+  --color-pink-deep: #8B4367;
+  --color-pink-gingham: #FADADD;
+  --color-grass-dark: #163015;
+  --color-grass-mid: #274E22;
+  --color-paper-linen: #EFECE6;
+  --color-ink: #181818;
+  --color-ink-soft: #4A4A4A;
+  --color-xp-blue: #0058E6;
+  --color-xp-sky: #5A9CF8;
+  --color-selection-cyan: #00C4CC;
+
+  --color-primary: #8B4367;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #163015;
+  --color-on-secondary: #FFFFFF;
+  --color-tertiary: #0058E6;
+  --color-on-tertiary: #FFFFFF;
+  --color-surface: #EFECE6;
+  --color-on-surface: #181818;
+  --color-surface-container: #FFFFFF;
+  --color-surface-container-low: #F8F6F2;
+  --color-on-surface-variant: #4A4A4A;
+  --color-outline: #181818;
+  --color-outline-variant: #D5D8DE;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-headline: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-title: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-label: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-handwritten: "Caveat", cursive, sans-serif;
+}
+
+@layer base {
+  body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+:root {
+  --ease-scrapbook: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Global Scrapbook Utilities */
+.pill-heading {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #181818;
+  border: 2px solid #181818;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-weight: 800;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.2;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.marker-pink {
+  background: #F7B5D1;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #181818;
+}
+
+.sticker-cutout {
+  filter:
+    drop-shadow(2px 0 0 #fff)
+    drop-shadow(-2px 0 0 #fff)
+    drop-shadow(0 2px 0 #fff)
+    drop-shadow(0 -2px 0 #fff)
+    drop-shadow(0 8px 16px rgba(0, 0, 0, 0.22));
+}
+
+/* Section 1: Artificial Turf Texture */
+.hero-turf {
+  background-color: #163015;
+  background-image:
+    radial-gradient(ellipse at center, transparent 35%, rgba(6, 18, 6, 0.68) 100%),
+    repeating-linear-gradient(112deg, rgba(56, 110, 44, 0.28) 0px, rgba(56, 110, 44, 0.28) 2px, transparent 2px, transparent 6px),
+    repeating-linear-gradient(-68deg, rgba(39, 78, 34, 0.35) 0px, rgba(39, 78, 34, 0.35) 1.5px, transparent 1.5px, transparent 5px),
+    linear-gradient(160deg, #1E3E19 0%, #163015 55%, #0F230E 100%);
+}
+
+.porto-ribbon {
+  background: #8B4367;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 26px);
+  padding: 4px 28px 6px;
+  clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+  margin-bottom: -14px;
+  z-index: 2;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.folio-display {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(92px, 16vw, 210px);
+  line-height: 0.85;
+  color: #F7B5D1;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: clamp(16px, 2vw, 24px);
+}
+
+/* Section 2: Woven Linen Paper */
+.bg-linen {
+  background-color: #EFECE6;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 3px);
+}
+
+/* Retro Silver Feature Phone */
+.phone-chassis {
+  background: linear-gradient(145deg, #F5F6F8 0%, #D5D8DE 48%, #AEB3BC 100%);
+  border: 2px solid #9AA0AA;
+  border-radius: 36px;
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.9),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.18),
+    0 20px 38px rgba(0, 0, 0, 0.22);
+}
+
+.phone-gingham {
+  background-color: #FFFFFF;
+  background-image:
+    linear-gradient(90deg, rgba(250, 218, 221, 0.72) 50%, transparent 50%),
+    linear-gradient(rgba(250, 218, 221, 0.72) 50%, transparent 50%);
+  background-size: 24px 24px;
+}
+
+.phone-dpad {
+  background: linear-gradient(145deg, #FFFFFF 0%, #C8CDD6 100%);
+  border: 2px solid #8E95A0;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.95),
+    0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.14s var(--ease-scrapbook);
+}
+.phone-dpad:active {
+  transform: scale(0.95);
+}
+
+/* Software & Tools Tiles */
+.skill-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s var(--ease-scrapbook), box-shadow 0.2s var(--ease-scrapbook);
+}
+.skill-tile:hover {
+  transform: translateY(-4px) rotate(-4deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.tile-canva {
+  background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%);
+}
+.tile-excel {
+  background-color: #217346;
+}
+.tile-word {
+  background-color: #2B579A;
+}
+.tile-vscode {
+  background-color: #007ACC;
+}
+
+/* Section 3: Alpine Scenery & Pink Clipboard */
+.bg-alpine {
+  background: linear-gradient(180deg, #B5D2E8 0%, #D9E8F3 45%, #8BAEC4 100%);
+}
+
+.chrome-clip {
+  background: linear-gradient(180deg, #E4E7EC 0%, #FFFFFF 35%, #9DA3AE 70%, #D2D6DE 100%);
+  border: 1.5px solid #7C828D;
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.26), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.clipboard-board {
+  background-color: #F7B5D1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+  background-size: 16px 16px;
+  border-radius: 18px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+/* Section 4: Windows XP Bliss & Explorer Window */
+.bg-bliss {
+  background: linear-gradient(180deg, #4B94F2 0%, #7CB9FA 45%, #C6E3FD 72%, #50A834 72%, #3D8C24 100%);
+}
+
+.xp-window {
+  border: 3px solid #0054E3;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+}
+
+.xp-titlebar {
+  height: 34px;
+  background: linear-gradient(180deg, #0997FF 0%, #0058E6 48%, #0050EE 52%, #003DD7 100%);
+}
+
+.xp-dot-grid {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(#D9DDE4 1.25px, transparent 1.25px);
+  background-size: 20px 20px;
+}
+
+.xp-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid #FFFFFF;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+.xp-btn-blue {
+  background: linear-gradient(180deg, #4A95F9 0%, #1B64D6 100%);
+}
+.xp-btn-red {
+  background: linear-gradient(180deg, #F3755B 0%, #D93018 100%);
+}
+
+/* Canva Bounding Selection Frame & 8 Handles */
+.canva-card {
+  border: 2px solid transparent;
+  transition: border-color 0.18s var(--ease-scrapbook), transform 0.18s var(--ease-scrapbook);
+}
+.canva-card:hover,
+.canva-card.is-selected,
+.canva-card:focus-visible {
+  border-color: #00C4CC;
+  outline: none;
+}
+.canva-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #00C4CC;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s var(--ease-scrapbook);
+  z-index: 10;
+}
+.canva-card:hover .canva-handle,
+.canva-card.is-selected .canva-handle,
+.canva-card:focus-visible .canva-handle {
+  opacity: 1;
+}
+.handle-tl { top: -5px; left: -5px; }
+.handle-tc { top: -5px; left: 50%; transform: translateX(-50%); }
+.handle-tr { top: -5px; right: -5px; }
+.handle-ml { top: 50%; left: -5px; transform: translateY(-50%); }
+.handle-mr { top: 50%; right: -5px; transform: translateY(-50%); }
+.handle-bl { bottom: -5px; left: -5px; }
+.handle-bc { bottom: -5px; left: 50%; transform: translateX(-50%); }
+.handle-br { bottom: -5px; right: -5px; }
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-scrapbook), transform 0.7s var(--ease-scrapbook);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+dialog::backdrop {
+  background: rgba(24, 24, 24, 0.58);
+  backdrop-filter: blur(3px);
+}
